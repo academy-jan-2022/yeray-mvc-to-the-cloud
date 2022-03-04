@@ -28,9 +28,9 @@ jobs:
 
     - name: Zip package
       uses: papeloto/action-zip@v1
-        with:
-          files: ./publish
-          dest: publish.zip
+      with:
+        files: ./publish/
+        dest: publish.zip
 
     - name: Login to azure
       uses: azure/login@v1
