@@ -26,12 +26,6 @@ jobs:
     - name: Generate package
       run: dotnet publish ./src/MvcToTheCloud/MvcToTheCloud/MvcToTheCloud.csproj -o ./publish --configuration Release
 
-    - name: Zip package
-      uses: papeloto/action-zip@v1
-      with:
-        files: ./publish/
-        dest: publish.zip
-
     - name: Login to azure
       uses: azure/login@v1
       with:
@@ -44,3 +38,12 @@ jobs:
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./infra/azuredeploy.json
         parameters: ./infra/azuredeploy.parameters.json
+
+    - name: Deploy to Azure Web App
+      id: deploy-to-webapp
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'acchjn2022'
+        slot-name: 'production'
+        publish-profile: ${{ secrets.PublishProfile }}
+        package: ./publish/

@@ -117,26 +117,6 @@
       "properties": {
         "ApplicationId": "[parameters('webAppName')]"
       }
-    },
-    {
-      "apiVersion": "2015-08-01",
-      "name": "MSDeploy",
-      "type": "Microsoft.Web/sites/extensions",
-      "location": "[resourceGroup().location]",
-      "dependsOn": [
-          "[concat('Microsoft.Web/sites/', parameters('webAppName'))]"
-      ],
-      "tags": {
-          "displayName": "webDeploy"
-      },
-      "properties": {
-          "packageUri": "./publish.zip",
-          "dbType": "None",
-          "connectionString": "",
-          "setParameters": {
-              "IIS Web Application Name": "[parameters('webAppName')]"
-          }
-      }
     }
   ]
 }
