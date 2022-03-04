@@ -27,11 +27,13 @@ jobs:
       run: dotnet publish ./src/MvcToTheCloud/MvcToTheCloud/MvcToTheCloud.csproj -o ./publish --configuration Release
 
     - name: Login to azure
+      if: github.ref == 'refs/heads/main'
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: Run ARM deploy
+      if: github.ref == 'refs/heads/main'
       uses: azure/arm-deploy@v1
       with:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
@@ -40,6 +42,7 @@ jobs:
         parameters: ./infra/azuredeploy.parameters.json
 
     - name: Deploy to Azure Web App
+      if: github.ref == 'refs/heads/main'
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
