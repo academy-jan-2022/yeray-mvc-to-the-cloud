@@ -25,3 +25,8 @@ jobs:
       run: dotnet test --no-build --verbosity normal ./src/MvcToTheCloud/
     - name: Generate package
       run: dotnet publish ./src/MvcToTheCloud/MvcToTheCloud/MvcToTheCloud.csproj -o ./publish --configuration Release
+
+    - name: Login to azure
+      uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
