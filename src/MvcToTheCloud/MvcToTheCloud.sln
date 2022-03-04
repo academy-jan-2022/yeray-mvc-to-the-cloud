@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcToTheCloud", "MvcToTheCloud\MvcToTheCloud.csproj", "{420AF9E0-4102-42BC-8264-65E44BA39001}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcToTheCloud.Tests", "MvcToTheCloud.Tests\MvcToTheCloud.Tests.csproj", "{A11E70A4-8BAC-40DB-AE36-831C1C2FC3EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{420AF9E0-4102-42BC-8264-65E44BA39001}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{420AF9E0-4102-42BC-8264-65E44BA39001}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{420AF9E0-4102-42BC-8264-65E44BA39001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A11E70A4-8BAC-40DB-AE36-831C1C2FC3EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A11E70A4-8BAC-40DB-AE36-831C1C2FC3EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A11E70A4-8BAC-40DB-AE36-831C1C2FC3EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A11E70A4-8BAC-40DB-AE36-831C1C2FC3EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
