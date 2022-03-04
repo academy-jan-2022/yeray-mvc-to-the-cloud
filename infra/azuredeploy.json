@@ -119,10 +119,10 @@
       }
     },
     {
+      "apiVersion": "2015-08-01",
       "name": "MSDeploy",
-      "type": "Extensions",
+      "type": "Microsoft.Web/sites/extensions",
       "location": "[resourceGroup().location]",
-      "apiVersion": "2018-11-01",
       "dependsOn": [
           "[concat('Microsoft.Web/sites/', parameters('webAppName'))]"
       ],
