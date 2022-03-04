@@ -20,6 +20,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./src/MvcToTheCloud/
     - name: Build
-      run: dotnet build --no-restore ./src/MvcToTheCloud/MvcToTheCloud/MvcToTheCloud.csproj
+      run: dotnet build --no-restore ./src/MvcToTheCloud/
     - name: Test
       run: dotnet test --no-build --verbosity normal ./src/MvcToTheCloud/
